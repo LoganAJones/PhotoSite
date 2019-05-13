@@ -1,0 +1,120 @@
+.home{
+  font-family: monospace;
+  font-weight: bolder;
+  font-stretch: expanded;
+  font-size: 40pt;
+  color: white;
+}
+.align{
+  text-align: center;
+
+}
+.hometext{
+  font-weight: bold;
+  font-size: 15pt;
+  font-family: arial;
+  color: white;
+  float: center;
+}
+.container{
+  text-align: center;
+  align-items: center;
+  box-sizing: border-box
+}
+.floatR{
+  float: right;
+}
+
+.pad {
+  margin-top: 10%;
+}
+.p{
+  text-align: center;
+  align-items: center;
+  float: center;
+}
+
+.sidenav {
+    height:  100px;
+    margin-top:  20%;
+    margin-bottom:  25%;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    background-color: #383140;
+    overflow-x: hidden;
+    padding-top: 10px;
+    text-align: center;
+    border-radius: 45px;
+
+}
+.sidenav:hover{
+  height:  300px;
+}
+.sidenav a {
+    // padding: 6px 8px 6px 16px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    font-size: 50px;
+    color: #0878a4;
+    display: block;
+     cursor: pointer;
+}
+
+.sidenav a:hover {
+    color: #f22f08;
+}
+.dropdown {
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #0878a4;
+  padding: 14px 16px;
+  background-color: transparent;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: transparent;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: transparent;
+
+}
+.title{
+  margin-top: 30%;
+}

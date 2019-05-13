@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <title>LoganPhoto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+
+    <%= javascript_include_tag "vendor/modernizr" %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body id="background" class="background-color small-12 large-12 columns p">
+
+  <nav class="top-bar">
+    <ul class="title-area">
+      <a href="/"><i class="fas fa-camera"></i></a>
+    </ul>
+
+    <section class="top-bar-section ">
+      <ul class="right">
+        <%- if current_user -%>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        <%- else -%>
+          <!-- <li><%= link_to 'Sign Up', new_user_registration_path %></li> -->
+          <li><%= link_to 'Sign In', new_user_session_path %></li>
+        <%- end -%>
+      </ul>
+    </section>
+  </nav>
+  <div class="sidenav">
+  <div class="dropdown">
+<a class="dropdbtn" href="/"><i class="fab fa-bandcamp fa-spin"></i></a>
+<div class="dropdown-content">
+<a href="/photos"><i class="fas fa-camera"></i></a>
+<a href="/contact"> <i class="fas fa-phone"></i></a>
+</div>
+</div>
+</div>
+
+
+  <% if user_signed_in? %>
+  <!-- <a href="#clients"><i class="fas fa-heart"></i></a> -->
+  <%= link_to '<i class="far fa-user"></i>'.html_safe, user_path(current_user) %>
+</div>
+  <%- end -%>
+</div>
+
+  <%- flash.each do |key, value| -%>
+    <div class="flash flash-<%= key %>">
+      <%= value %>
+    </div>
+  <%- end -%>
+
+<div class="small-12 large-12 columns container ">
+  <div class="">
+
+    <% if !user_signed_in? %>
+    <p class="center text"></p>
+    <%- end -%>
+
+    <%= yield %>
+  </div>
+</div>
+
+  <%= javascript_include_tag 'application' %>
+
+  <%- if Rails.env.development? || Rails.env.test? -%>
+    <%= javascript_tag do %>
+      window.railsEnv = '<%= Rails.env %>'
+    <%- end -%>
+  <%- end -%>
+  <%= javascript_pack_tag 'application' %>
+
+  <%= yield :extra_footer %>
+</body>
+</html>

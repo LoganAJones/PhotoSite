@@ -1,0 +1,107 @@
+input[type="submit"] {
+  font-weight: bold;
+  background-color: #DB5461;
+  border: none;
+  color: #2F2D2E;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+margin-top: 20px;
+}
+input[type="submit"]:hover {
+   background-color: #01BAEF;
+   color: #2F2D2E;
+
+}
+
+input[type="submit"]:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #665;
+  transform: translateY(4px);
+}
+
+.button2 {
+  font-weight: bold;
+  background-color: #35A7FF;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 5%;
+  border: none;
+  color: #DB162F;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  box-shadow: 0 9px #999;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  width: 12%;
+
+  height: 4%;
+
+
+}
+
+.button2:hover {
+  background-color: #01BAEF;
+  color: #DB162F;
+
+}
+.button2:active {
+  background-color: green;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  color: #35A7ff
+}
+
+.tint {
+  position: sticky;
+  margin: auto;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.tint:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,255,255, 0.5);
+  transition: all .3s linear;
+
+}
+
+.tint:hover:before { background: none; }
+
+.t2:before { background: rgba(0,0,255, 0.5); }
+.t3:before { background: rgba(255,0,0, 0.5); }
+.t4:before { background: rgba(0,255,0, 0.5); }
+.t5:before { background: rgba(255,0,240, 0.5); }
+.t6:before { background: rgba(1,186,239, 0.5); }
+
+.buttonhome {
+  background-color: transparent;
+  background-repeat:no-repeat;
+  border-radius: 5px;
+  border-color: white;
+  border-width: 3px;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  width: 40%;
+  height: 70px;
+}
+.buttonhome:hover {
+  border-image-source: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+  border-image-slice: 1;
+  background-color: transparent;
+
+  }
