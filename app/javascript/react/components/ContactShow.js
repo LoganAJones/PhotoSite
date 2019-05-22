@@ -28,8 +28,10 @@ const ContactShow = (props) => {
   return(
 
     <div className=" small-12  columns">
-    <div className="post-tile small-4  columns">
+    <div className="post-tile small-4  columns tilebreak">
     <h1>HI</h1>
+
+    <p>hi </p>
     </div>
     <div className="small-8 columns ">
 
